@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+import { forwardRef } from "react";
 import AnimatedSection from "./AnimatedSection";
 
-const Footer = () => (
-  <footer className="relative border-t border-border/10">
+const Footer = forwardRef<HTMLElement>((_, ref) => (
+  <footer ref={ref} className="relative border-t border-border/10">
     <div className="absolute inset-0 bg-mesh opacity-50" />
     <div className="container mx-auto px-6 py-20 relative z-10">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8">
@@ -67,6 +68,8 @@ const Footer = () => (
       </div>
     </div>
   </footer>
-);
+));
+
+Footer.displayName = "Footer";
 
 export default Footer;
