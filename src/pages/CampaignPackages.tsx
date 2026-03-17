@@ -31,7 +31,7 @@ const packages = [
   },
   {
     name: "Scale Campaign",
-    price: "₦80,000 – ₦100,000",
+    price: "₦100,000",
     period: "Monthly Retainer",
     bestFor: ["Scaling businesses", "Multi-product brands", "Agencies"],
     includes: ["Multi-platform ads", "Retargeting campaigns", "Lookalike audiences", "Advanced analytics", "Campaign optimization"],
