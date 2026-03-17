@@ -78,9 +78,8 @@ const Index = () => {
             <p className="text-primary font-display font-semibold text-label uppercase mb-8 tracking-[0.25em]">
               Marketing & Communication
             </p>
-            <h1 className="text-display-xl font-display font-extrabold mb-8 break-words">
-              <span className="gradient-text">TURN ATTENTION</span>
-              <br />
+            <h1 className="text-[clamp(1.75rem,6.5vw,7rem)] font-display font-extrabold mb-8 leading-[1.0] tracking-[-0.03em]">
+              <span className="gradient-text block">TURN ATTENTION</span>
               <span className="gradient-text">INTO </span>
               <span className="gradient-text-primary">CUSTOMERS</span>
             </h1>
