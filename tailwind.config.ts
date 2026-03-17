@@ -18,7 +18,7 @@ export default {
         body: ["Inter", "sans-serif"],
       },
       fontSize: {
-        "display-xl": ["clamp(2.2rem, 7vw, 7rem)", { lineHeight: "1.0", letterSpacing: "-0.03em" }],
+        "display-xl": ["clamp(2rem, 7vw, 7rem)", { lineHeight: "1.0", letterSpacing: "-0.03em" }],
         "display-lg": ["clamp(1.8rem, 5vw, 4.5rem)", { lineHeight: "1.05", letterSpacing: "-0.02em" }],
         "display-md": ["clamp(1.5rem, 3.5vw, 3rem)", { lineHeight: "1.15", letterSpacing: "-0.02em" }],
         "body-lg": ["1.125rem", { lineHeight: "1.7" }],
