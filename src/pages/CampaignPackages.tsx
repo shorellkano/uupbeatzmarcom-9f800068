@@ -82,12 +82,12 @@ const CampaignPackages = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
             {packages.map((pkg, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
-                <div className={`glass-card p-8 h-full flex flex-col relative overflow-hidden card-lift ${
-                  pkg.featured ? "glow-red border-primary/20 md:scale-105 z-10" : ""
+                <div className={`glass-card p-8 h-full flex flex-col relative card-lift ${
+                  pkg.featured ? "glow-red border-primary/20 md:scale-105 z-10 overflow-visible pt-12" : "overflow-hidden"
                 }`}>
                   {pkg.featured && (
                     <>
-                      <div className="absolute inset-0"
+                      <div className="absolute inset-0 overflow-hidden rounded-[inherit]"
                         style={{ background: "radial-gradient(circle at 50% 0%, hsl(347 77% 50% / 0.1) 0%, transparent 50%)" }} />
                       <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-5 py-1.5 rounded-full bg-primary text-primary-foreground text-label font-display font-bold tracking-[0.15em] uppercase z-20 shadow-[0_4px_15px_-3px_hsl(var(--primary)/0.4)]">
                         Premium
@@ -126,14 +126,19 @@ const CampaignPackages = () => {
                       <p className="text-sm font-display font-bold text-foreground mt-1">{pkg.adBudget}</p>
                     </div>
 
-                    <button className={`w-full py-4 rounded-xl font-display font-bold text-sm transition-all duration-500 flex items-center justify-center gap-2 group ${
-                      pkg.featured
-                        ? "btn-primary !w-full"
-                        : "btn-outline !w-full"
-                    }`}>
+                    <a
+                      href="https://wa.me/2348000000000?text=Hi%2C%20I'm%20interested%20in%20the%20" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`w-full py-4 rounded-xl font-display font-bold text-sm transition-all duration-500 flex items-center justify-center gap-2 group ${
+                        pkg.featured
+                          ? "btn-primary !w-full"
+                          : "btn-outline !w-full"
+                      }`}
+                    >
                       {pkg.cta}
                       <ArrowUpRight size={14} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                    </button>
+                    </a>
                   </div>
                 </div>
               </AnimatedSection>
