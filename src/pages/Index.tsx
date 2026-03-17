@@ -69,7 +69,7 @@ const Index = () => {
           <div className="absolute inset-0 grid-overlay opacity-20" />
         </div>
 
-        <motion.div style={{ y: heroY, opacity: heroOpacity }} className="container mx-auto relative z-10 text-center max-w-5xl px-6">
+        <motion.div style={{ y: heroY, opacity: heroOpacity }} className="container mx-auto relative z-10 text-center max-w-5xl px-6 overflow-hidden">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
