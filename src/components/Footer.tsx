@@ -50,11 +50,9 @@ const Footer = forwardRef<HTMLElement>((_, ref) => (
               <a href="mailto:hello@upbeatzmarcom.com" className="text-sm text-muted-foreground hover:text-primary transition-all duration-300">
                 hello@upbeatzmarcom.com
               </a>
-              {["Instagram", "LinkedIn", "Twitter / X"].map((s) => (
-                <a key={s} href="#" className="text-sm text-muted-foreground hover:text-foreground transition-all duration-300 hover:translate-x-1 inline-flex">
-                  {s}
-                </a>
-              ))}
+              <a href="https://www.instagram.com/upbeatzmarcom" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-all duration-300 hover:translate-x-1 inline-flex">
+                Instagram
+              </a>
             </div>
           </AnimatedSection>
         </div>
