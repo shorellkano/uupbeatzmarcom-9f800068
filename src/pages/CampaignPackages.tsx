@@ -126,14 +126,19 @@ const CampaignPackages = () => {
                       <p className="text-sm font-display font-bold text-foreground mt-1">{pkg.adBudget}</p>
                     </div>
 
-                    <button className={`w-full py-4 rounded-xl font-display font-bold text-sm transition-all duration-500 flex items-center justify-center gap-2 group ${
-                      pkg.featured
-                        ? "btn-primary !w-full"
-                        : "btn-outline !w-full"
-                    }`}>
+                    <a
+                      href="https://wa.me/2348000000000?text=Hi%2C%20I'm%20interested%20in%20the%20" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`w-full py-4 rounded-xl font-display font-bold text-sm transition-all duration-500 flex items-center justify-center gap-2 group ${
+                        pkg.featured
+                          ? "btn-primary !w-full"
+                          : "btn-outline !w-full"
+                      }`}
+                    >
                       {pkg.cta}
                       <ArrowUpRight size={14} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                    </button>
+                    </a>
                   </div>
                 </div>
               </AnimatedSection>
