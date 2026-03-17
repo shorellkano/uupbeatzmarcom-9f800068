@@ -127,7 +127,7 @@ const CampaignPackages = () => {
                     </div>
 
                     <a
-                      href="https://wa.me/2348000000000?text=Hi%2C%20I'm%20interested%20in%20the%20" 
+                      href={`https://wa.me/2348027244825?text=${encodeURIComponent(`Hi, I'm interested in the ${pkg.name} package`)}`} 
                       target="_blank"
                       rel="noopener noreferrer"
                       className={`w-full py-4 rounded-xl font-display font-bold text-sm transition-all duration-500 flex items-center justify-center gap-2 group ${
