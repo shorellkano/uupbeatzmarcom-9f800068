@@ -20,9 +20,9 @@ const services = [
 ];
 
 const packages = [
-  { name: "Local Visibility Starter", price: "₦25K–₦30K", desc: "Perfect for small businesses starting with paid ads" },
+  { name: "Local Visibility Starter", price: "₦30K", desc: "Perfect for small businesses starting with paid ads" },
   { name: "Growth Campaign", price: "₦50K", desc: "Multi-platform campaigns with conversion tracking" },
-  { name: "Scale Campaign", price: "₦80K–₦100K", desc: "Full-scale advertising with retargeting & analytics", featured: true },
+  { name: "Scale Campaign", price: "₦100K", desc: "Full-scale advertising with retargeting & analytics", featured: true },
 ];
 
 const FloatingMetric = ({ label, value, delay, className }: { label: string; value: string; delay: number; className: string }) => (

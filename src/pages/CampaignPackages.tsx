@@ -11,7 +11,7 @@ import {
 const packages = [
   {
     name: "Local Visibility Starter",
-    price: "₦25,000 – ₦30,000",
+    price: "₦30,000",
     period: "Monthly Retainer",
     bestFor: ["Fashion sellers", "Wig vendors", "Small stores", "Home businesses"],
     includes: ["Campaign setup", "Facebook & Instagram ads", "Local targeting", "Product promotion", "Monthly report"],
@@ -31,7 +31,7 @@ const packages = [
   },
   {
     name: "Scale Campaign",
-    price: "₦80,000 – ₦100,000",
+    price: "₦100,000",
     period: "Monthly Retainer",
     bestFor: ["Scaling businesses", "Multi-product brands", "Agencies"],
     includes: ["Multi-platform ads", "Retargeting campaigns", "Lookalike audiences", "Advanced analytics", "Campaign optimization"],
