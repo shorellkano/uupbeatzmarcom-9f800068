@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/upbeatz-logo.jpg";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -32,10 +33,8 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between h-16 md:h-20 px-6">
-        <Link to="/" className="flex items-center gap-2 group">
-          <span className="font-display font-bold text-lg tracking-tight text-foreground transition-colors duration-300">
-            Upbeatz<span className="text-primary transition-all duration-300 group-hover:drop-shadow-[0_0_8px_hsl(var(--primary)/0.5)]"> Marcom</span>
-          </span>
+        <Link to="/" className="flex items-center group">
+          <img src={logo} alt="Upbeatz Marcom" className="h-10 md:h-12 w-auto object-contain" />
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
