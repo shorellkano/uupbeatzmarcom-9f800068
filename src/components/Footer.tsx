@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { forwardRef } from "react";
 import AnimatedSection from "./AnimatedSection";
 import { Instagram } from "lucide-react";
-import logo from "@/assets/upbeatz-logo.jpg";
+
 
 const Footer = forwardRef<HTMLElement>((_, ref) => (
   <footer ref={ref} className="relative border-t border-border/10">
@@ -11,7 +11,10 @@ const Footer = forwardRef<HTMLElement>((_, ref) => (
       <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8">
         <div className="md:col-span-5">
           <AnimatedSection>
-            <img src={logo} alt="Upbeatz Marcom" className="h-12 w-auto object-contain mb-4" />
+            <span className="font-display font-extrabold text-2xl tracking-tight inline-block mb-4">
+              <span className="text-foreground">Upbeatz</span>
+              <span className="text-primary ml-1 italic">Marcom</span>
+            </span>
             <p className="text-muted-foreground text-body-md max-w-sm mb-8 leading-relaxed">
               We help businesses turn online attention into real customers through paid social campaigns and conversion-focused marketing systems.
             </p>
