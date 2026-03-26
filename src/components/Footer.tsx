@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { forwardRef } from "react";
 import AnimatedSection from "./AnimatedSection";
+import logo from "@/assets/upbeatz-logo.jpg";
 
 const Footer = forwardRef<HTMLElement>((_, ref) => (
   <footer ref={ref} className="relative border-t border-border/10">
