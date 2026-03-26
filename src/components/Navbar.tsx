@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/upbeatz-logo.jpg";
 
 const navLinks = [
   { label: "Home", href: "/" },
