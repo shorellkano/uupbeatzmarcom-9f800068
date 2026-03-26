@@ -53,8 +53,9 @@ const Footer = forwardRef<HTMLElement>((_, ref) => (
               <a href="tel:+2347071042782" className="text-sm text-muted-foreground hover:text-primary transition-all duration-300">
                 +234 707 104 2782
               </a>
-              <a href="https://www.instagram.com/upbeatzmarcom" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-all duration-300 hover:translate-x-1 inline-flex">
-                Instagram
+              <a href="https://www.instagram.com/upbeatzmarcom" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-all duration-300 hover:translate-x-1 inline-flex items-center gap-2">
+                <Instagram size={16} />
+                @upbeatzmarcom
               </a>
             </div>
           </AnimatedSection>
