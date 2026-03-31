@@ -68,7 +68,7 @@ const Footer = forwardRef<HTMLElement>((_, ref) => (
       <div className="section-divider mt-16 mb-8" />
 
       <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-        <p className="text-muted-foreground/40 text-xs">© 2025 Upbeatz Marcom. All rights reserved.</p>
+        <p className="text-muted-foreground/40 text-xs">© 2026 Upbeatz Marcom. All rights reserved.</p>
         <p className="text-muted-foreground/40 text-xs tracking-wider uppercase">Marketing & Communication</p>
       </div>
     </div>
