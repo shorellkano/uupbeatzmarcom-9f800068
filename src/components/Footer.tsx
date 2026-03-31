@@ -11,9 +11,9 @@ const Footer = forwardRef<HTMLElement>((_, ref) => (
       <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8">
         <div className="md:col-span-5">
           <AnimatedSection>
-            <span className="font-display font-extrabold text-2xl tracking-tight inline-block mb-4">
+            <span className="font-body font-semibold text-base md:text-lg tracking-wide uppercase inline-block mb-4">
               <span className="text-foreground">Upbeatz</span>
-              <span className="text-primary ml-1 italic">Marcom</span>
+              <span className="text-primary ml-1 font-light italic lowercase">Marcom</span>
             </span>
             <p className="text-muted-foreground text-body-md max-w-sm mb-8 leading-relaxed">
               We help businesses turn online attention into real customers through paid social campaigns and conversion-focused marketing systems.
