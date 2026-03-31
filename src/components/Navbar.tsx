@@ -33,9 +33,9 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between h-16 md:h-20 px-6">
         <Link to="/" className="flex items-center group">
-          <span className="font-display font-extrabold text-xl md:text-2xl tracking-tight">
+          <span className="font-body font-semibold text-base md:text-lg tracking-wide uppercase">
             <span className="text-foreground">Upbeatz</span>
-            <span className="text-primary ml-1 italic">Marcom</span>
+            <span className="text-primary ml-1 font-light italic lowercase">Marcom</span>
           </span>
         </Link>
 
