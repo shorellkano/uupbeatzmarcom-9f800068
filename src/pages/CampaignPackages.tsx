@@ -262,7 +262,7 @@ const CampaignPackages = () => {
                   Choose a package or book a call to discuss your goals.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                  <a href="#" className="btn-primary flex items-center gap-2 group">
+                  <a href="https://wa.me/2348027244825?text=Hi%2C%20I'd%20like%20to%20book%20a%20strategy%20call" target="_blank" rel="noopener noreferrer" className="btn-primary flex items-center gap-2 group">
                     Book Strategy Call
                     <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
                   </a>
