@@ -7,6 +7,8 @@ import Index from "./pages/Index.tsx";
 import CampaignPackages from "./pages/CampaignPackages.tsx";
 import CampaignProcess from "./pages/CampaignProcess.tsx";
 import Websites from "./pages/Websites.tsx";
+import Work from "./pages/Work.tsx";
+import Storvo from "./pages/Storvo.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -22,6 +24,8 @@ const App = () => (
           <Route path="/packages" element={<CampaignPackages />} />
           <Route path="/process" element={<CampaignProcess />} />
           <Route path="/websites" element={<Websites />} />
+          <Route path="/work" element={<Work />} />
+          <Route path="/storvo" element={<Storvo />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
