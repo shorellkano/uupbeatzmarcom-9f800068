@@ -5,24 +5,62 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import {
   Megaphone, PenTool, Zap, Target, Users, BarChart3,
-  Star, TrendingUp, ArrowRight, CheckCircle2, ArrowUpRight
+  Globe, ShoppingCart, LayoutDashboard, Cpu, Building2, TrendingUp, Lightbulb,
+  ArrowRight, CheckCircle2, ArrowUpRight, Sparkles
 } from "lucide-react";
 
-const services = [
-  { icon: Megaphone, title: "Social Media Marketing", desc: "Strategic campaigns across all major platforms" },
-  { icon: PenTool, title: "Content Strategy", desc: "High-converting creative content systems" },
-  { icon: Zap, title: "Marketing Automation", desc: "Automated workflows that nurture leads" },
-  { icon: Target, title: "Brand Strategy", desc: "Positioning that resonates with your audience" },
-  { icon: Users, title: "Acquisition Funnels", desc: "End-to-end conversion pipelines" },
-  { icon: BarChart3, title: "Targeted Advertising", desc: "Precision-targeted paid campaigns" },
-  { icon: Star, title: "Review Generation", desc: "Build social proof that converts" },
-  { icon: TrendingUp, title: "Marketing Analytics", desc: "Data-driven campaign optimization" },
+const WA = (msg: string) => `https://wa.me/2349097927111?text=${encodeURIComponent(msg)}`;
+const START_PROJECT = WA("Hi Upbeatz Marcom, I'd like to start a project.");
+
+const audiences = [
+  {
+    icon: Building2,
+    title: "Small Businesses",
+    desc: "Build your digital foundation.",
+    items: ["Websites", "Branding", "Ecommerce", "Customer acquisition"],
+  },
+  {
+    icon: TrendingUp,
+    title: "Growing Businesses",
+    desc: "Create systems that support growth.",
+    items: ["Marketing strategy", "Automation", "CRM", "Lead generation"],
+  },
+  {
+    icon: Lightbulb,
+    title: "Organisations & Digital Ideas",
+    desc: "Bring bigger ideas to life.",
+    items: ["Apps", "Platforms", "Custom solutions"],
+  },
 ];
 
-const packages = [
-  { name: "Local Visibility Starter", price: "₦30K", desc: "Perfect for small businesses starting with paid ads" },
-  { name: "Growth Campaign", price: "₦50K", desc: "Multi-platform campaigns with conversion tracking" },
-  { name: "Scale Campaign", price: "₦100K", desc: "Full-scale advertising with retargeting & analytics", featured: true },
+const builds = [
+  { icon: Globe, title: "Websites", desc: "Professional websites designed to build trust and generate enquiries." },
+  { icon: ShoppingCart, title: "Ecommerce", desc: "Online stores that help businesses sell beyond social media." },
+  { icon: LayoutDashboard, title: "Apps & Digital Platforms", desc: "Turn ideas into working digital products." },
+  { icon: Cpu, title: "Business Systems", desc: "CRM, automation and internal platforms." },
+];
+
+const growth = [
+  { icon: Megaphone, title: "Social Media Management", desc: "Consistent presence that builds audience and trust." },
+  { icon: PenTool, title: "Content Strategy", desc: "Creative built to convert, not just to post." },
+  { icon: Target, title: "Paid Advertising", desc: "Precision-targeted campaigns across Meta and Google." },
+  { icon: Users, title: "Customer Acquisition Funnels", desc: "End-to-end pipelines from click to customer." },
+  { icon: Zap, title: "AI Automation", desc: "Automated follow-up, support and workflows." },
+  { icon: BarChart3, title: "Analytics", desc: "Data-driven optimisation and clear reporting." },
+];
+
+const systemSteps = [
+  { n: "01", title: "Discover", desc: "Understand the business, audience and objectives." },
+  { n: "02", title: "Build", desc: "Create the right digital foundation." },
+  { n: "03", title: "Launch", desc: "Connect the business with the right audience." },
+  { n: "04", title: "Scale", desc: "Use data, automation and optimisation to improve growth." },
+];
+
+const work = [
+  { name: "Storvo", category: "Ecommerce Platform", accent: "265 85% 62%" },
+  { name: "ZebraLink", category: "Digital Business Card Web App", accent: "45 93% 58%" },
+  { name: "Upbeatz Hub", category: "Client Management Platform", accent: "347 77% 50%" },
+  { name: "Client Websites", category: "Corporate, hospitality and service websites", accent: "205 90% 55%" },
 ];
 
 const FloatingMetric = ({ label, value, delay, className }: { label: string; value: string; delay: number; className: string }) => (
@@ -52,7 +90,6 @@ const Index = () => {
     <Layout>
       {/* Hero */}
       <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Animated gradient orbs */}
         <div className="absolute inset-0">
           <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] rounded-full animate-pulse-glow"
             style={{ background: "radial-gradient(ellipse, hsl(347 77% 50% / 0.08) 0%, transparent 60%)" }} />
@@ -76,83 +113,71 @@ const Index = () => {
             transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
           >
             <p className="text-primary font-display font-semibold text-label uppercase mb-8 tracking-[0.25em]">
-              Marketing & Communication
+              Digital Growth &amp; Technology Partner
             </p>
             <h1 className="text-[clamp(1.75rem,6.5vw,7rem)] font-display font-extrabold mb-8 leading-[1.0] tracking-[-0.03em]">
-              <span className="gradient-text block">TURN ATTENTION</span>
-              <span className="gradient-text">INTO </span>
-              <span className="gradient-text-primary">CUSTOMERS</span>
+              <span className="gradient-text block">BUILD DIGITAL EXPERIENCES.</span>
+              <span className="gradient-text">GROW </span>
+              <span className="gradient-text-primary">REAL BUSINESSES.</span>
             </h1>
             <p className="text-muted-foreground text-body-lg max-w-2xl mx-auto mb-12 leading-relaxed">
-              Upbeatz Marcom helps businesses grow through paid social campaigns, customer acquisition systems, and marketing strategies designed to turn visibility into sales.
+              Upbeatz Marcom helps businesses create powerful digital solutions, attract customers and scale online through technology, AI and performance marketing.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link to="/packages" className="btn-primary flex items-center gap-2.5 group">
-                Get More Customers
+              <a href={START_PROJECT} target="_blank" rel="noopener noreferrer" className="btn-primary flex items-center gap-2.5 group">
+                Start Your Project
                 <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
-              </Link>
-              <Link to="/packages" className="btn-outline flex items-center gap-2">
-                View Campaign Packages
+              </a>
+              <Link to="/work" className="btn-outline flex items-center gap-2">
+                Explore Our Work
               </Link>
             </div>
           </motion.div>
 
-          {/* Floating metrics */}
           <div className="hidden lg:block">
-            <FloatingMetric label="Avg. ROAS" value="4.2×" delay={1} className="top-0 -left-10" />
-            <FloatingMetric label="Leads Generated" value="12K+" delay={1.3} className="top-16 -right-8" />
-            <FloatingMetric label="Campaign CTR" value="3.8%" delay={1.6} className="bottom-20 -left-4" />
+            <FloatingMetric label="Projects Delivered" value="20+" delay={1} className="top-0 -left-10" />
+            <FloatingMetric label="Avg. ROAS" value="4.2×" delay={1.3} className="top-16 -right-8" />
+            <FloatingMetric label="Leads Generated" value="12K+" delay={1.6} className="bottom-20 -left-4" />
           </div>
         </motion.div>
 
-        {/* Bottom fade */}
         <div className="absolute bottom-0 left-0 right-0 h-40" style={{ background: "linear-gradient(to top, hsl(0 0% 2%) 0%, transparent 100%)" }} />
       </section>
 
       <div className="section-divider" />
 
-      {/* Problem */}
+      {/* Who We Help */}
       <section className="section-padding bg-mesh relative">
-        <div className="container mx-auto max-w-3xl text-center relative z-10">
-          <AnimatedSection>
-            <p className="text-primary font-display font-semibold text-label uppercase mb-6 tracking-[0.2em]">The Problem</p>
-            <h2 className="text-display-md font-display font-bold mb-8 text-foreground leading-tight">
-              Most businesses post online but struggle to turn attention into revenue.
-            </h2>
-            <p className="text-muted-foreground text-body-lg leading-relaxed max-w-xl mx-auto">
-              Posting content alone does not create predictable customer growth. Businesses need structured campaigns, precision targeting, and conversion systems that turn clicks into customers.
-            </p>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      <div className="section-divider" />
-
-      {/* Solution */}
-      <section className="section-padding relative">
-        <div className="absolute inset-0 bg-radial-center" />
-        <div className="container mx-auto max-w-4xl relative z-10">
+        <div className="container mx-auto max-w-6xl relative z-10">
           <AnimatedSection>
             <div className="text-center mb-16">
-              <p className="text-primary font-display font-semibold text-label uppercase mb-4 tracking-[0.2em]">The Solution</p>
+              <p className="text-primary font-display font-semibold text-label uppercase mb-4 tracking-[0.2em]">Who We Help</p>
               <h2 className="text-display-md font-display font-bold text-foreground">
-                We Build Campaigns That <span className="gradient-text-primary">Bring Customers</span>
+                Built For Every Stage of <span className="gradient-text-primary">Growth</span>
               </h2>
             </div>
           </AnimatedSection>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            {[
-              "Increase visibility across platforms",
-              "Attract the right audience with precision targeting",
-              "Generate qualified inquiries consistently",
-              "Convert visitors into paying buyers",
-            ].map((item, i) => (
-              <AnimatedSection key={i} delay={i * 0.08}>
-                <div className="glass-card-hover p-6 flex items-start gap-4 group cursor-default">
-                  <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 transition-all duration-500 group-hover:bg-primary/20 group-hover:scale-110">
-                    <CheckCircle2 className="text-primary" size={16} />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {audiences.map((a, i) => (
+              <AnimatedSection key={a.title} delay={i * 0.08}>
+                <div className="glass-card-hover p-8 h-full group relative overflow-hidden">
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+                    style={{ background: "radial-gradient(circle at 50% 0%, hsl(347 77% 50% / 0.06) 0%, transparent 60%)" }} />
+                  <div className="relative z-10">
+                    <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center mb-5 transition-all duration-500 group-hover:bg-primary/20">
+                      <a.icon className="text-primary" size={22} />
+                    </div>
+                    <h3 className="font-display font-bold text-lg mb-2 text-foreground">{a.title}</h3>
+                    <p className="text-muted-foreground text-sm mb-6">{a.desc}</p>
+                    <ul className="space-y-2.5">
+                      {a.items.map((item) => (
+                        <li key={item} className="flex items-center gap-2.5 text-sm text-foreground/85">
+                          <CheckCircle2 className="text-primary shrink-0" size={14} />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                  <p className="text-foreground/90 text-sm font-medium leading-relaxed">{item}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -162,75 +187,28 @@ const Index = () => {
 
       <div className="section-divider" />
 
-      {/* Services */}
-      <section className="section-padding bg-mesh relative">
+      {/* What We Build */}
+      <section className="section-padding relative">
+        <div className="absolute inset-0 bg-radial-center" />
         <div className="container mx-auto max-w-6xl relative z-10">
           <AnimatedSection>
-            <div className="text-center mb-20">
-              <p className="text-primary font-display font-semibold text-label uppercase mb-4 tracking-[0.2em]">What We Do</p>
-              <h2 className="text-display-md font-display font-bold text-foreground">Our Core Services</h2>
+            <div className="text-center mb-16">
+              <p className="text-primary font-display font-semibold text-label uppercase mb-4 tracking-[0.2em]">Technology</p>
+              <h2 className="text-display-md font-display font-bold text-foreground">What We Build</h2>
             </div>
           </AnimatedSection>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {services.map((svc, i) => (
-              <AnimatedSection key={i} delay={i * 0.05}>
-                <div className="glass-card-hover p-7 group cursor-default h-full relative overflow-hidden">
-                  {/* Hover glow */}
+            {builds.map((b, i) => (
+              <AnimatedSection key={b.title} delay={i * 0.06}>
+                <div className="glass-card-hover p-7 h-full group cursor-default relative overflow-hidden">
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
                     style={{ background: "radial-gradient(circle at 50% 0%, hsl(347 77% 50% / 0.06) 0%, transparent 60%)" }} />
                   <div className="relative z-10">
                     <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center mb-5 transition-all duration-500 group-hover:bg-primary/20 group-hover:shadow-[0_0_20px_-5px_hsl(var(--primary)/0.3)]">
-                      <svc.icon className="text-primary transition-transform duration-500 group-hover:scale-110" size={22} />
+                      <b.icon className="text-primary transition-transform duration-500 group-hover:scale-110" size={22} />
                     </div>
-                    <h3 className="font-display font-semibold text-sm mb-2 text-foreground">{svc.title}</h3>
-                    <p className="text-muted-foreground text-xs leading-relaxed">{svc.desc}</p>
-                  </div>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <div className="section-divider" />
-
-      {/* Package Preview */}
-      <section className="section-padding relative">
-        <div className="absolute inset-0 bg-radial-center" />
-        <div className="container mx-auto max-w-5xl relative z-10">
-          <AnimatedSection>
-            <div className="text-center mb-20">
-              <p className="text-primary font-display font-semibold text-label uppercase mb-4 tracking-[0.2em]">Pricing</p>
-              <h2 className="text-display-md font-display font-bold text-foreground">Campaign Packages</h2>
-            </div>
-          </AnimatedSection>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
-            {packages.map((pkg, i) => (
-              <AnimatedSection key={i} delay={i * 0.1}>
-                <div className={`glass-card p-8 text-center h-full flex flex-col card-lift relative overflow-hidden ${
-                  pkg.featured ? "glow-red border-primary/20 md:scale-[1.05] z-10" : ""
-                }`}>
-                  {pkg.featured && (
-                    <>
-                      <div className="absolute inset-0"
-                        style={{ background: "radial-gradient(circle at 50% 0%, hsl(347 77% 50% / 0.08) 0%, transparent 50%)" }} />
-                      <span className="relative z-10 text-label font-display font-bold uppercase text-primary mb-5 tracking-[0.2em]">Most Popular</span>
-                    </>
-                  )}
-                  <div className="relative z-10">
-                    <h3 className="font-display font-bold text-lg mb-3 text-foreground">{pkg.name}</h3>
-                    <p className="gradient-text-primary font-display font-extrabold text-3xl mb-4">{pkg.price}<span className="text-muted-foreground text-xs font-normal">/mo</span></p>
-                    <p className="text-muted-foreground text-sm mb-8">{pkg.desc}</p>
-                    <Link
-                      to="/packages"
-                      className={`inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold transition-all duration-500 ${
-                        pkg.featured
-                          ? "btn-primary !inline-flex"
-                          : "btn-outline !inline-flex"
-                      }`}
-                    >
-                      Learn More <ArrowUpRight size={14} />
-                    </Link>
+                    <h3 className="font-display font-semibold text-sm mb-2 text-foreground uppercase tracking-wide">{b.title}</h3>
+                    <p className="text-muted-foreground text-xs leading-relaxed">{b.desc}</p>
                   </div>
                 </div>
               </AnimatedSection>
@@ -238,8 +216,8 @@ const Index = () => {
           </div>
           <AnimatedSection delay={0.3}>
             <div className="text-center mt-12">
-              <Link to="/packages" className="text-primary font-display font-semibold text-sm hover:underline inline-flex items-center gap-2 group">
-                View Full Campaign Packages
+              <Link to="/websites" className="text-primary font-display font-semibold text-sm hover:underline inline-flex items-center gap-2 group">
+                Explore Website &amp; Platform Development
                 <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </div>
@@ -249,28 +227,70 @@ const Index = () => {
 
       <div className="section-divider" />
 
-      {/* Process Preview */}
+      {/* Growth Marketing */}
       <section className="section-padding bg-mesh relative">
-        <div className="container mx-auto max-w-3xl text-center relative z-10">
+        <div className="container mx-auto max-w-6xl relative z-10">
+          <AnimatedSection>
+            <div className="text-center mb-16 max-w-2xl mx-auto">
+              <p className="text-primary font-display font-semibold text-label uppercase mb-4 tracking-[0.2em]">Growth Marketing</p>
+              <h2 className="text-display-md font-display font-bold text-foreground mb-6">
+                Technology Alone Doesn't Bring <span className="gradient-text-primary">Customers</span>
+              </h2>
+              <p className="text-muted-foreground text-body-lg leading-relaxed">
+                A website or platform is only the foundation. We pair what we build with customer acquisition systems that keep enquiries and sales coming in.
+              </p>
+            </div>
+          </AnimatedSection>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {growth.map((g, i) => (
+              <AnimatedSection key={g.title} delay={i * 0.05}>
+                <div className="glass-card-hover p-7 h-full group cursor-default">
+                  <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center mb-5 transition-all duration-500 group-hover:bg-primary/20">
+                    <g.icon className="text-primary" size={22} />
+                  </div>
+                  <h3 className="font-display font-semibold text-sm mb-2 text-foreground">{g.title}</h3>
+                  <p className="text-muted-foreground text-xs leading-relaxed">{g.desc}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+          <AnimatedSection delay={0.3}>
+            <div className="text-center mt-12">
+              <Link to="/packages" className="text-primary font-display font-semibold text-sm hover:underline inline-flex items-center gap-2 group">
+                View Campaign Packages
+                <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      <div className="section-divider" />
+
+      {/* Growth System */}
+      <section className="section-padding relative">
+        <div className="absolute inset-0 bg-radial-center" />
+        <div className="container mx-auto max-w-5xl text-center relative z-10">
           <AnimatedSection>
             <p className="text-primary font-display font-semibold text-label uppercase mb-4 tracking-[0.2em]">Our System</p>
-            <h2 className="text-display-md font-display font-bold mb-16 text-foreground">The Upbeatz Campaign System</h2>
+            <h2 className="text-display-md font-display font-bold mb-16 text-foreground">The Upbeatz Growth System</h2>
           </AnimatedSection>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {["Product Selection", "Creative Production", "Targeting Setup", "Campaign Launch"].map((step, i) => (
-              <AnimatedSection key={i} delay={i * 0.1}>
-                <div className="glass-card-hover p-5 text-center group cursor-default">
-                  <div className="w-10 h-10 mx-auto rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center mb-3 transition-all duration-500 group-hover:bg-primary/20 group-hover:shadow-[0_0_15px_-3px_hsl(var(--primary)/0.3)]">
-                    <span className="text-primary font-display font-bold text-xs">{String(i + 1).padStart(2, '0')}</span>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {systemSteps.map((step, i) => (
+              <AnimatedSection key={step.n} delay={i * 0.1}>
+                <div className="glass-card-hover p-6 text-center group cursor-default h-full">
+                  <div className="w-10 h-10 mx-auto rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center mb-4 transition-all duration-500 group-hover:bg-primary/20 group-hover:shadow-[0_0_15px_-3px_hsl(var(--primary)/0.3)]">
+                    <span className="text-primary font-display font-bold text-xs">{step.n}</span>
                   </div>
-                  <p className="text-foreground text-xs font-display font-semibold">{step}</p>
+                  <p className="text-foreground text-sm font-display font-semibold uppercase tracking-wide mb-2">{step.title}</p>
+                  <p className="text-muted-foreground text-xs leading-relaxed">{step.desc}</p>
                 </div>
               </AnimatedSection>
             ))}
           </div>
           <AnimatedSection delay={0.4}>
             <Link to="/process" className="inline-flex items-center gap-2 mt-12 text-primary font-display font-semibold text-sm hover:underline group">
-              See Our Campaign Process
+              See How We Work
               <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
           </AnimatedSection>
@@ -279,7 +299,82 @@ const Index = () => {
 
       <div className="section-divider" />
 
-      {/* CTA */}
+      {/* Selected Work */}
+      <section className="section-padding bg-mesh relative">
+        <div className="container mx-auto max-w-6xl relative z-10">
+          <AnimatedSection>
+            <div className="text-center mb-16">
+              <p className="text-primary font-display font-semibold text-label uppercase mb-4 tracking-[0.2em]">Portfolio</p>
+              <h2 className="text-display-md font-display font-bold text-foreground">Selected Work</h2>
+            </div>
+          </AnimatedSection>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            {work.map((p, i) => (
+              <AnimatedSection key={p.name} delay={i * 0.08}>
+                <Link to="/work" className="glass-card-hover p-8 h-full group block relative overflow-hidden">
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+                    style={{ background: `radial-gradient(circle at 20% 0%, hsl(${p.accent} / 0.12) 0%, transparent 60%)` }} />
+                  <div className="relative z-10 flex items-start justify-between gap-4">
+                    <div>
+                      <h3 className="font-display font-bold text-xl mb-2 text-foreground">{p.name}</h3>
+                      <p className="text-muted-foreground text-sm">{p.category}</p>
+                    </div>
+                    <ArrowUpRight className="text-primary shrink-0 transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" size={20} />
+                  </div>
+                  <div className="relative z-10 mt-6 h-1 rounded-full" style={{ background: `linear-gradient(90deg, hsl(${p.accent} / 0.6), transparent)` }} />
+                </Link>
+              </AnimatedSection>
+            ))}
+          </div>
+          <AnimatedSection delay={0.3}>
+            <div className="text-center mt-12">
+              <Link to="/work" className="btn-outline inline-flex items-center gap-2">
+                View All Work
+                <ArrowRight size={14} />
+              </Link>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      <div className="section-divider" />
+
+      {/* Storvo Partnership */}
+      <section className="section-padding relative">
+        <div className="absolute inset-0 bg-radial-center" />
+        <div className="container mx-auto max-w-4xl relative z-10">
+          <AnimatedSection>
+            <div className="glass-card p-10 md:p-16 border-primary/15 relative overflow-hidden">
+              <div className="absolute inset-0"
+                style={{ background: "radial-gradient(ellipse at 100% 0%, hsl(265 85% 62% / 0.10) 0%, transparent 60%)" }} />
+              <div className="relative z-10">
+                <div className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-full border border-primary/20 bg-primary/5">
+                  <Sparkles className="text-primary" size={14} />
+                  <span className="text-label uppercase tracking-[0.2em] font-display font-semibold text-primary">Partnership</span>
+                </div>
+                <h2 className="text-display-md font-display font-bold mb-6 text-foreground">
+                  Built Your Store With <span className="gradient-text-primary">Storvo</span>?
+                </h2>
+                <p className="text-muted-foreground text-body-lg leading-relaxed mb-8 max-w-2xl">
+                  Storvo helps entrepreneurs create professional online stores quickly and easily. Through our partnership with Storvo, Upbeatz helps merchants build their brand, attract customers and grow sales.
+                </p>
+                <div className="glass-card p-6 mb-8 max-w-md">
+                  <p className="text-foreground font-display font-semibold text-sm mb-1">Storvo builds the store.</p>
+                  <p className="text-primary font-display font-semibold text-sm">Upbeatz Marcom helps businesses grow.</p>
+                </div>
+                <Link to="/storvo" className="btn-primary inline-flex items-center gap-2 group">
+                  Explore Storvo Partnership
+                  <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                </Link>
+              </div>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      <div className="section-divider" />
+
+      {/* Final CTA */}
       <section id="contact" className="section-padding relative">
         <div className="absolute inset-0 bg-radial-dark" />
         <div className="container mx-auto max-w-3xl text-center relative z-10">
@@ -289,14 +384,14 @@ const Index = () => {
                 style={{ background: "radial-gradient(ellipse at 50% 0%, hsl(347 77% 50% / 0.08) 0%, transparent 60%)" }} />
               <div className="relative z-10">
                 <h2 className="text-display-md font-display font-bold mb-5 text-foreground">
-                  Ready to Grow Your Business?
+                  Ready to Build Something Bigger?
                 </h2>
-                <p className="text-muted-foreground mb-10 text-body-lg max-w-md mx-auto">
-                  Let's build a campaign that brings you customers.
+                <p className="text-muted-foreground mb-10 text-body-lg max-w-xl mx-auto">
+                  Whether you need a website, digital platform or complete growth strategy, Upbeatz Marcom helps turn ideas into scalable digital solutions.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                  <a href="#" className="btn-primary flex items-center gap-2 group">
-                    Book a Strategy Call
+                  <a href={START_PROJECT} target="_blank" rel="noopener noreferrer" className="btn-primary flex items-center gap-2 group">
+                    Start Your Project
                     <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
                   </a>
                   <a href="mailto:hello@upbeatzmarcom.com" className="btn-outline">
