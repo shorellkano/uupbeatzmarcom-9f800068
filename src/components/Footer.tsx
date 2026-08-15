@@ -16,11 +16,11 @@ const Footer = forwardRef<HTMLElement>((_, ref) => (
               <span className="text-primary ml-1 font-light italic lowercase">Marcom</span>
             </span>
             <p className="text-muted-foreground text-body-md max-w-sm mb-8 leading-relaxed">
-              We help businesses turn online attention into real customers through paid social campaigns and conversion-focused marketing systems.
+              Upbeatz Marcom is a digital growth and technology partner helping businesses build, launch and scale through websites, digital products, AI and performance marketing.
             </p>
             <div className="flex items-center gap-2 text-muted-foreground/40 text-xs">
               <div className="w-1.5 h-1.5 rounded-full bg-primary/50 animate-pulse" />
-              Lagos, Nigeria · London, UK
+              Surulere, Lagos · Ogba, Lagos
             </div>
           </AnimatedSection>
         </div>
@@ -31,8 +31,11 @@ const Footer = forwardRef<HTMLElement>((_, ref) => (
             <div className="flex flex-col gap-3">
               {[
                 { label: "Home", to: "/" },
+                { label: "Websites", to: "/websites" },
+                { label: "Our Work", to: "/work" },
                 { label: "Campaign Packages", to: "/packages" },
-                { label: "Campaign Process", to: "/process" },
+                { label: "Growth Process", to: "/process" },
+                { label: "Storvo Partnership", to: "/storvo" },
               ].map((link) => (
                 <Link
                   key={link.to}
@@ -52,6 +55,9 @@ const Footer = forwardRef<HTMLElement>((_, ref) => (
             <div className="flex flex-col gap-3">
               <a href="mailto:hello@upbeatzmarcom.com" className="text-sm text-muted-foreground hover:text-primary transition-all duration-300">
                 hello@upbeatzmarcom.com
+              </a>
+              <a href="https://wa.me/2349097927111" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary transition-all duration-300">
+                WhatsApp: +234 909 792 7111
               </a>
               <a href="tel:+2347071042782" className="text-sm text-muted-foreground hover:text-primary transition-all duration-300">
                 +234 707 104 2782

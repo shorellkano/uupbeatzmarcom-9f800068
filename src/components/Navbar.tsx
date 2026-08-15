@@ -5,9 +5,10 @@ import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "Packages", href: "/packages" },
-  { label: "Process", href: "/process" },
   { label: "Websites", href: "/websites" },
+  { label: "Work", href: "/work" },
+  { label: "Packages", href: "/packages" },
+  { label: "Storvo", href: "/storvo" },
   { label: "Contact", href: "/#contact" },
 ];
 
@@ -57,9 +58,14 @@ const Navbar = () => {
               }`} />
             </Link>
           ))}
-          <Link to="/packages" className="btn-primary !py-2.5 !px-6 !text-xs flex items-center gap-2">
-            Get Customers
-          </Link>
+          <a
+            href="https://wa.me/2349097927111?text=Hi%20Upbeatz%20Marcom%2C%20I'd%20like%20to%20start%20a%20project."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary !py-2.5 !px-6 !text-xs flex items-center gap-2"
+          >
+            Start Your Project
+          </a>
         </div>
 
         <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-foreground p-2">
@@ -95,13 +101,15 @@ const Navbar = () => {
                   </Link>
                 </motion.div>
               ))}
-              <Link
-                to="/packages"
+              <a
+                href="https://wa.me/2349097927111?text=Hi%20Upbeatz%20Marcom%2C%20I'd%20like%20to%20start%20a%20project."
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setIsOpen(false)}
                 className="btn-primary text-center mt-4 !py-3"
               >
-                Get Customers
-              </Link>
+                Start Your Project
+              </a>
             </div>
           </motion.div>
         )}
