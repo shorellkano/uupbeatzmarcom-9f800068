@@ -2,14 +2,15 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import Logo from "./Logo";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "Websites", href: "/websites" },
+  { label: "Services", href: "/#services" },
   { label: "Work", href: "/work" },
-  { label: "Packages", href: "/packages" },
+  { label: "Websites", href: "/websites" },
   { label: "Storvo", href: "/storvo" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const Navbar = () => {
@@ -34,12 +35,7 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between h-16 md:h-20 px-6">
-        <Link to="/" className="flex items-center group">
-          <span className="font-body font-semibold text-base md:text-lg tracking-wide uppercase">
-            <span className="text-foreground">Upbeatz</span>
-            <span className="text-primary ml-1 font-light italic lowercase">Marcom</span>
-          </span>
-        </Link>
+        <Logo />
 
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
@@ -64,7 +60,7 @@ const Navbar = () => {
             rel="noopener noreferrer"
             className="btn-primary !py-2.5 !px-6 !text-xs flex items-center gap-2"
           >
-            Start Your Project
+            Grow Your Business
           </a>
         </div>
 
@@ -108,7 +104,7 @@ const Navbar = () => {
                 onClick={() => setIsOpen(false)}
                 className="btn-primary text-center mt-4 !py-3"
               >
-                Start Your Project
+                Grow Your Business
               </a>
             </div>
           </motion.div>
