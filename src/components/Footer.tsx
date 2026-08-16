@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { forwardRef } from "react";
 import AnimatedSection from "./AnimatedSection";
 import { Instagram } from "lucide-react";
+import Logo from "./Logo";
 
 
 const Footer = forwardRef<HTMLElement>((_, ref) => (
@@ -11,16 +12,13 @@ const Footer = forwardRef<HTMLElement>((_, ref) => (
       <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8">
         <div className="md:col-span-5">
           <AnimatedSection>
-            <span className="font-body font-semibold text-base md:text-lg tracking-wide uppercase inline-block mb-4">
-              <span className="text-foreground">Upbeatz</span>
-              <span className="text-primary ml-1 font-light italic lowercase">Marcom</span>
-            </span>
+            <div className="mb-6"><Logo className="h-10" /></div>
             <p className="text-muted-foreground text-body-md max-w-sm mb-8 leading-relaxed">
-              Upbeatz Marcom is a digital growth and technology partner helping businesses build, launch and scale through websites, digital products, AI and performance marketing.
+              Upbeatz Marcom is a digital marketing agency helping businesses grow through social media, content strategy, advertising, AI-powered marketing and practical digital solutions.
             </p>
             <div className="flex items-center gap-2 text-muted-foreground/40 text-xs">
               <div className="w-1.5 h-1.5 rounded-full bg-primary/50 animate-pulse" />
-              Surulere, Lagos · Ogba, Lagos
+              1 Modupe Johnson Crescent, Surulere, Lagos · 43 Ajayi Road, Ogba, Lagos
             </div>
           </AnimatedSection>
         </div>
@@ -31,11 +29,11 @@ const Footer = forwardRef<HTMLElement>((_, ref) => (
             <div className="flex flex-col gap-3">
               {[
                 { label: "Home", to: "/" },
-                { label: "Websites", to: "/websites" },
                 { label: "Our Work", to: "/work" },
+                { label: "Websites", to: "/websites" },
                 { label: "Campaign Packages", to: "/packages" },
-                { label: "Growth Process", to: "/process" },
                 { label: "Storvo Partnership", to: "/storvo" },
+                { label: "Contact", to: "/contact" },
               ].map((link) => (
                 <Link
                   key={link.to}
