@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import Seo from "@/components/Seo";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
@@ -84,6 +85,12 @@ const Section = ({ label, title, subtitle, items }: { label: string; title: stri
 
 const Work = () => (
   <Layout>
+      <Seo
+        title={"Our Work | Digital Marketing Projects & Business Solutions | Upbeatz Marcom"}
+        description={"Explore websites, digital platforms and marketing projects created by Upbeatz Marcom for businesses and growing brands."}
+        path="/work"
+      />
+
     <section className="relative pt-36 pb-20 md:pt-44 md:pb-28 overflow-hidden">
       <div className="absolute inset-0 grid-overlay opacity-20" />
       <div className="absolute inset-0 bg-radial-center" />

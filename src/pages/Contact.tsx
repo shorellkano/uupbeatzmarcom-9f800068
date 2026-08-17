@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { z } from "zod";
 import Layout from "@/components/Layout";
+import Seo from "@/components/Seo";
 import AnimatedSection from "@/components/AnimatedSection";
 import { toast } from "sonner";
+import { trackLead, trackWhatsApp } from "@/lib/analytics";
 import { Mail, MapPin, MessageCircle, Phone, ArrowRight } from "lucide-react";
 
 const services = [
@@ -51,6 +53,8 @@ const Contact = () => {
       `Hi Upbeatz Marcom, I'd like to start a project.\n\n` +
       `Name: ${d.name}\nBusiness: ${d.business}\nEmail: ${d.email}\nPhone/WhatsApp: ${d.phone}\n` +
       `Service required: ${d.service}\n\nProject details:\n${d.details}`;
+    trackLead("contact_form", { service: d.service });
+    trackWhatsApp("contact_form_submit", "Start Your Project");
     window.open(`https://wa.me/2349097927111?text=${encodeURIComponent(msg)}`, "_blank", "noopener,noreferrer");
     toast.success("Opening WhatsApp with your enquiry.");
   };
@@ -63,6 +67,12 @@ const Contact = () => {
 
   return (
     <Layout>
+      <Seo
+        title={"Contact Upbeatz Marcom | Grow Your Business Online"}
+        description={"Contact Upbeatz Marcom for social media management, advertising, SEO, websites and digital marketing growth solutions."}
+        path="/contact"
+      />
+
       <section className="relative pt-36 pb-16 md:pt-44 md:pb-20 overflow-hidden">
         <div className="absolute inset-0 grid-overlay opacity-20" />
         <div className="absolute inset-0 bg-radial-center" />

@@ -31,6 +31,7 @@ const Footer = forwardRef<HTMLElement>((_, ref) => (
                 { label: "Home", to: "/" },
                 { label: "Our Work", to: "/work" },
                 { label: "Websites", to: "/websites" },
+                { label: "Insights", to: "/blog" },
                 { label: "Campaign Packages", to: "/packages" },
                 { label: "Storvo Partnership", to: "/storvo" },
                 { label: "Contact", to: "/contact" },
@@ -70,6 +71,18 @@ const Footer = forwardRef<HTMLElement>((_, ref) => (
       </div>
 
       <div className="section-divider mt-16 mb-8" />
+
+      <div className="flex flex-col md:flex-row items-center justify-center md:justify-start gap-4 md:gap-6 mb-6">
+        {[
+          { label: "Privacy Policy", to: "/privacy-policy" },
+          { label: "Terms & Conditions", to: "/terms-and-conditions" },
+          { label: "Cookie Policy", to: "/cookie-policy" },
+        ].map((l) => (
+          <Link key={l.to} to={l.to} className="text-xs text-muted-foreground hover:text-primary transition-colors duration-300">
+            {l.label}
+          </Link>
+        ))}
+      </div>
 
       <div className="flex flex-col md:flex-row items-center justify-between gap-4">
         <p className="text-muted-foreground/40 text-xs">© 2026 Upbeatz Marcom. All rights reserved.</p>

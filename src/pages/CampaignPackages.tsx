@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import Seo from "@/components/Seo";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -57,6 +58,12 @@ const retargetSteps = [
 const CampaignPackages = () => {
   return (
     <Layout>
+      <Seo
+        title={"Campaign Packages & Pricing | Upbeatz Marcom"}
+        description={"Monthly social media and advertising campaign packages from Upbeatz Marcom, built to help businesses attract customers and grow online."}
+        path="/packages"
+      />
+
       {/* Header */}
       <section className="section-padding bg-radial-dark relative overflow-hidden">
         <div className="absolute inset-0 grid-overlay opacity-15" />
