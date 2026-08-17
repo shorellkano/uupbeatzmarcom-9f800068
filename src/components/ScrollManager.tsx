@@ -12,19 +12,23 @@ const ScrollManager = () => {
   useEffect(() => {
     if (hash) {
       const id = hash.replace("#", "");
-      // Wait for the target route to mount before measuring.
-      console.log("SM hash", id);
+      const header = 88; // fixed navbar height + breathing room
+      const timers: number[] = [];
+      // Wait for the target route to mount (and for any library scroll reset
+      // that runs on navigation) before positioning the section.
       const attempt = (tries = 0) => {
         const el = document.getElementById(id);
-        if (el) {
-          const header = 88; // fixed navbar height + breathing room
-          const top = el.getBoundingClientRect().top + window.scrollY - header;
-          window.scrollTo({ top, behavior: "smooth" });
-        } else if (tries < 20) {
-          requestAnimationFrame(() => attempt(tries + 1));
+        if (!el) {
+          if (tries < 30) timers.push(window.setTimeout(() => attempt(tries + 1), 50));
+          return;
         }
+        const top = el.getBoundingClientRect().top + window.scrollY - header;
+        window.scrollTo({ top, behavior: "smooth" });
       };
-      attempt();
+      timers.push(window.setTimeout(() => attempt(), 80));
+      // Second pass corrects for late-loading images/animated sections.
+      timers.push(window.setTimeout(() => attempt(), 450));
+      return () => timers.forEach(clearTimeout);
     } else {
       window.scrollTo({ top: 0, left: 0, behavior: "auto" });
     }
