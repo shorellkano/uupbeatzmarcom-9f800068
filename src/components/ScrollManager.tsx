@@ -13,6 +13,7 @@ const ScrollManager = () => {
     if (hash) {
       const id = hash.replace("#", "");
       // Wait for the target route to mount before measuring.
+      console.log("SM hash", id);
       const attempt = (tries = 0) => {
         const el = document.getElementById(id);
         if (el) {
