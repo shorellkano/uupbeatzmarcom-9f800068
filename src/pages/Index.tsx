@@ -1,6 +1,8 @@
 import Layout from "@/components/Layout";
+import Seo from "@/components/Seo";
 import AnimatedSection from "@/components/AnimatedSection";
 import PartnerMarquee from "@/components/PartnerMarquee";
+import { trackWhatsApp } from "@/lib/analytics";
 import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
@@ -104,6 +106,12 @@ const Index = () => {
 
   return (
     <Layout>
+      <Seo
+        title={"Upbeatz Marcom | Digital Marketing Agency Helping Businesses Grow Online"}
+        description={"Upbeatz Marcom helps businesses grow through social media management, content strategy, paid advertising, SEO, AI-powered marketing and customer acquisition strategies."}
+        path="/"
+      />
+
       {/* Hero */}
       <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
@@ -136,7 +144,7 @@ const Index = () => {
               Upbeatz Marcom helps businesses build stronger brands, create valuable content, reach the right audience and grow through social media, advertising, AI and practical digital marketing strategies.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href={GROW} target="_blank" rel="noopener noreferrer" className="btn-primary flex items-center gap-2.5 group">
+              <a href={GROW} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsApp("home_hero", "Grow Your Business")} className="btn-primary flex items-center gap-2.5 group">
                 Grow Your Business
                 <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
               </a>
@@ -375,7 +383,7 @@ const Index = () => {
       <div className="section-divider" />
 
       {/* Selected Work */}
-      <section className="section-padding bg-mesh relative">
+      <section id="work" className="scroll-mt-24 section-padding bg-mesh relative">
         <div className="container mx-auto max-w-6xl relative z-10">
           <AnimatedSection className="text-center mb-16">
             <p className="text-primary font-display font-semibold text-label uppercase mb-5 tracking-[0.25em]">Portfolio</p>
@@ -437,7 +445,7 @@ const Index = () => {
                 Tell us about your business and we'll map out the right growth strategy.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href={GROW} target="_blank" rel="noopener noreferrer" className="btn-primary flex items-center gap-2 group">
+                <a href={GROW} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsApp("home_final_cta", "Grow Your Business")} className="btn-primary flex items-center gap-2 group">
                   Grow Your Business
                   <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
                 </a>

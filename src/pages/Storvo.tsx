@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import Seo from "@/components/Seo";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowUpRight, Palette, PenTool, Megaphone, Target, TrendingUp } from "lucide-react";
@@ -16,6 +17,12 @@ const support = [
 
 const Storvo = () => (
   <Layout>
+      <Seo
+        title={"Storvo Growth Partnership | Upbeatz Marcom"}
+        description={"Discover how Upbeatz Marcom helps Storvo merchants grow through branding, content marketing, advertising and digital growth strategies."}
+        path="/storvo"
+      />
+
     <section className="relative pt-36 pb-20 md:pt-44 md:pb-28 overflow-hidden">
       <div className="absolute inset-0 grid-overlay opacity-20" />
       <div className="absolute inset-0 bg-radial-center" />

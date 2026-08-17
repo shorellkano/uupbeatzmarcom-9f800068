@@ -3,12 +3,14 @@ import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Logo from "./Logo";
+import { trackWhatsApp } from "@/lib/analytics";
 
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/#services" },
   { label: "Work", href: "/work" },
   { label: "Websites", href: "/websites" },
+  { label: "Insights", href: "/blog" },
   { label: "Storvo", href: "/storvo" },
   { label: "Contact", href: "/contact" },
 ];
@@ -37,20 +39,20 @@ const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between h-16 md:h-20 px-6">
         <Logo />
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-6 lg:gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               to={link.href}
               className={`text-sm font-medium transition-all duration-300 relative group ${
-                location.pathname === link.href
+                location.pathname === link.href.split("#")[0] && !link.href.includes("#")
                   ? "text-foreground"
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
               {link.label}
               <span className={`absolute -bottom-1 left-0 h-px bg-primary transition-all duration-500 ${
-                location.pathname === link.href ? "w-full" : "w-0 group-hover:w-full"
+                location.pathname === link.href && !link.href.includes("#") ? "w-full" : "w-0 group-hover:w-full"
               }`} />
             </Link>
           ))}
@@ -58,6 +60,7 @@ const Navbar = () => {
             href="https://wa.me/2349097927111?text=Hi%20Upbeatz%20Marcom%2C%20I'd%20like%20to%20start%20a%20project."
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackWhatsApp("navbar", "Grow Your Business")}
             className="btn-primary !py-2.5 !px-6 !text-xs flex items-center gap-2"
           >
             Grow Your Business
@@ -101,7 +104,7 @@ const Navbar = () => {
                 href="https://wa.me/2349097927111?text=Hi%20Upbeatz%20Marcom%2C%20I'd%20like%20to%20start%20a%20project."
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => setIsOpen(false)}
+                onClick={() => { trackWhatsApp("mobile_menu", "Grow Your Business"); setIsOpen(false); }}
                 className="btn-primary text-center mt-4 !py-3"
               >
                 Grow Your Business

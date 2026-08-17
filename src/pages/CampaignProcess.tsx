@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import Seo from "@/components/Seo";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Link } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
@@ -76,6 +77,12 @@ const ProcessLine = ({ index }: { index: number }) => {
 const CampaignProcess = () => {
   return (
     <Layout>
+      <Seo
+        title={"Our Campaign Process | Upbeatz Marcom"}
+        description={"See how Upbeatz Marcom plans, launches and optimises marketing campaigns that turn attention into real business enquiries."}
+        path="/process"
+      />
+
       {/* Header */}
       <section className="section-padding bg-radial-dark relative overflow-hidden">
         <div className="absolute inset-0 grid-overlay opacity-15" />

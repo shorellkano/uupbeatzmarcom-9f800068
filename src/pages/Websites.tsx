@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import Seo from "@/components/Seo";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -137,6 +138,12 @@ const Websites = () => {
 
   return (
     <Layout>
+      <Seo
+        title={"Professional Website Design Services From ₦250,000 | Upbeatz Marcom"}
+        description={"Upbeatz Marcom builds professional websites that help businesses establish credibility, attract customers and create stronger online presence."}
+        path="/websites"
+      />
+
       <section ref={heroRef} className="relative min-h-[92vh] flex items-center overflow-hidden pb-24">
         <div className="absolute inset-0">
           <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[600px] rounded-full animate-pulse-glow"
