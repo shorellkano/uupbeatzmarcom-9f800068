@@ -3,7 +3,7 @@ import Seo from "@/components/Seo";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowUpRight, Palette, PenTool, Megaphone, Target, TrendingUp } from "lucide-react";
-import storvoAsset from "@/assets/storvo.png.asset.json";
+import storvoLogo from "@/assets/storvo-logo.png";
 
 const WA = (msg: string) => `https://wa.me/2349097927111?text=${encodeURIComponent(msg)}`;
 
@@ -29,7 +29,7 @@ const Storvo = () => (
       <div className="container mx-auto px-6 max-w-4xl text-center relative z-10">
         <AnimatedSection>
           <div className="inline-flex rounded-2xl bg-white px-6 py-3 mb-8">
-            <img src={storvoAsset.url} alt="Storvo logo" className="h-8 w-auto object-contain" />
+            <img src={storvoLogo} alt="Storvo logo" className="h-8 w-auto object-contain" />
           </div>
           <p className="text-primary font-display font-semibold text-label uppercase mb-6 tracking-[0.25em]">Partnership</p>
           <h1 className="text-[clamp(2rem,7vw,4.5rem)] font-display font-extrabold leading-[1.05] tracking-[-0.03em] mb-6">
