@@ -3,9 +3,9 @@ import Seo from "@/components/Seo";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
-import storvoAsset from "@/assets/storvo.png.asset.json";
-import zebraAsset from "@/assets/zebralink.png.asset.json";
-import safehavenAsset from "@/assets/safehaven.jpg.asset.json";
+import storvoLogo from "@/assets/storvo-logo.png";
+import zebraLogo from "@/assets/zebralink-logo.png";
+import safehavenLogo from "@/assets/safehaven-logo.jpg";
 
 const WA = (msg: string) => `https://wa.me/2349097927111?text=${encodeURIComponent(msg)}`;
 
@@ -14,9 +14,9 @@ type Project = {
 };
 
 const digitalProducts: Project[] = [
-  { name: "ZebraLink", url: "zebralinkcard.com", category: "Digital Business Card Web App", desc: "A digital networking platform helping professionals share their identity through QR and NFC technology.", accent: "45 93% 58%", logo: zebraAsset.url, light: true },
-  { name: "Storvo", url: "storvo.co", category: "Digital Store Platform", desc: "A platform helping entrepreneurs create online stores and sell beyond social media conversations.", accent: "265 85% 62%", logo: storvoAsset.url, light: true },
-  { name: "Safe Haven", url: "safehaven.host", category: "Hosting Platform", desc: "A hosting platform for AI-built apps, websites and digital creations, built around secure infrastructure and user ownership.", accent: "152 85% 50%", logo: safehavenAsset.url },
+  { name: "ZebraLink", url: "zebralinkcard.com", category: "Digital Business Card Web App", desc: "A digital networking platform helping professionals share their identity through QR and NFC technology.", accent: "45 93% 58%", logo: zebraLogo, light: true },
+  { name: "Storvo", url: "storvo.co", category: "Digital Store Platform", desc: "A platform helping entrepreneurs create online stores and sell beyond social media conversations.", accent: "265 85% 62%", logo: storvoLogo, light: true },
+  { name: "Safe Haven", url: "safehaven.host", category: "Hosting Platform", desc: "A hosting platform for AI-built apps, websites and digital creations, built around secure infrastructure and user ownership.", accent: "152 85% 50%", logo: safehavenLogo },
   { name: "Upbeatz Hub", category: "Client Management Platform", desc: "An internal platform used to manage client projects, campaigns and reporting in one place.", accent: "347 77% 50%" },
 ];
 

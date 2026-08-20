@@ -1,21 +1,21 @@
 import { motion } from "framer-motion";
-import giltAsset from "@/assets/gilt-ai.png.asset.json";
-import fihanAsset from "@/assets/fihan.png.asset.json";
-import storvoAsset from "@/assets/storvo.png.asset.json";
-import savviAsset from "@/assets/savvi.png.asset.json";
-import zebraAsset from "@/assets/zebralink.png.asset.json";
-import safehavenAsset from "@/assets/safehaven.jpg.asset.json";
+import giltLogo from "@/assets/gilt-ai-logo.webp";
+import fihanLogo from "@/assets/fihan-logo.webp";
+import storvoLogo from "@/assets/storvo-logo.png";
+import savviLogo from "@/assets/savvi-logo.png";
+import zebraLogo from "@/assets/zebralink-logo.png";
+import safehavenLogo from "@/assets/safehaven-logo.jpg";
 
 export type Partner = { name: string; desc: string; logo?: string; light?: boolean };
 
 export const partners: Partner[] = [
   { name: "Zuri AI", desc: "Africa's 24/7 AI design agency that creates content your market understands." },
-  { name: "Gilt AI", desc: "Turns your brand into high-converting Meta and TikTok ads through automation.", logo: giltAsset.url },
-  { name: "Fihan", desc: "Helps businesses get found on Google by auditing and improving search visibility.", logo: fihanAsset.url, light: true },
-  { name: "Storvo", desc: "Helps businesses create professional websites and digital stores that turn online presence into growth.", logo: storvoAsset.url, light: true },
-  { name: "ZebraLink", desc: "Africa's intelligent digital business card that captures leads through QR and NFC technology.", logo: zebraAsset.url, light: true },
-  { name: "Safe Haven", desc: "The hosting platform for AI-built apps, websites and digital creations.", logo: safehavenAsset.url },
-  { name: "Savvi", desc: "Verifies Nigerian students so they can access valuable brand discounts.", logo: savviAsset.url },
+  { name: "Gilt AI", desc: "Turns your brand into high-converting Meta and TikTok ads through automation.", logo: giltLogo },
+  { name: "Fihan", desc: "Helps businesses get found on Google by auditing and improving search visibility.", logo: fihanLogo, light: true },
+  { name: "Storvo", desc: "Helps businesses create professional websites and digital stores that turn online presence into growth.", logo: storvoLogo, light: true },
+  { name: "ZebraLink", desc: "Africa's intelligent digital business card that captures leads through QR and NFC technology.", logo: zebraLogo, light: true },
+  { name: "Safe Haven", desc: "The hosting platform for AI-built apps, websites and digital creations.", logo: safehavenLogo },
+  { name: "Savvi", desc: "Verifies Nigerian students so they can access valuable brand discounts.", logo: savviLogo },
 ];
 
 const PartnerCard = ({ p }: { p: Partner }) => (
