@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "@/assets/upbeatz-logo.png.asset.json";
+import logo from "@/assets/upbeatz-logo.png";
 
 const Logo = ({ className = "h-9 md:h-10" }: { className?: string }) => {
   const [failed, setFailed] = useState(false);
@@ -15,7 +15,7 @@ const Logo = ({ className = "h-9 md:h-10" }: { className?: string }) => {
       ) : (
         <span className="inline-flex items-center rounded-xl bg-white px-2.5 py-1.5 transition-all duration-500 group-hover:shadow-[0_0_30px_-8px_hsl(var(--primary)/0.5)]">
           <img
-            src={logo.url}
+            src={logo}
             alt="Upbeatz Marcom logo"
             onError={() => setFailed(true)}
             className={`${className} w-auto`}
