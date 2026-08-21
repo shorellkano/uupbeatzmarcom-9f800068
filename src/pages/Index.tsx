@@ -8,8 +8,24 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import {
   Megaphone, PenTool, Target, Search, Sparkles, Globe, ShoppingCart, LayoutDashboard,
-  Building2, TrendingUp, Award, ArrowRight, ArrowUpRight, CheckCircle2, BarChart3, Bot
+  Building2, TrendingUp, Award, ArrowRight, ArrowUpRight, CheckCircle2, BarChart3, Bot, ShieldCheck
 } from "lucide-react";
+import { posts } from "@/data/blog";
+
+const aiSearchCards = [
+  { icon: Search, title: "Google Search Visibility", desc: "Helping businesses improve how they appear when customers actively search for their products and services." },
+  { icon: Sparkles, title: "AI Search Visibility", desc: "Helping businesses become better understood by AI assistants and future search platforms." },
+  { icon: ShieldCheck, title: "Digital Authority", desc: "Building the trust signals, content and online presence that influence customer decisions." },
+];
+
+const insightSlugs = [
+  "how-ai-search-will-change-how-customers-find-businesses",
+  "google-seo-vs-ai-search-what-business-owners-need-to-know",
+  "why-your-website-may-not-be-ready-for-ai",
+];
+const insights = insightSlugs
+  .map((s) => posts.find((p) => p.slug === s))
+  .filter((p): p is (typeof posts)[number] => Boolean(p));
 
 const WA = (msg: string) => `https://wa.me/2349097927111?text=${encodeURIComponent(msg)}`;
 const GROW = WA("Hi Upbeatz Marcom, I'd like to grow my business online.");
@@ -320,6 +336,46 @@ const Index = () => {
                 </div>
               </div>
             </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      <div className="section-divider" />
+
+      {/* AI Growth Engine */}
+      <section id="ai-growth" className="section-padding relative scroll-mt-24 overflow-hidden">
+        <div className="absolute inset-0 bg-radial-center" />
+        <div className="absolute inset-0 grid-overlay opacity-20" />
+        <div className="container mx-auto max-w-6xl relative z-10">
+          <AnimatedSection className="text-center mb-16">
+            <p className="text-primary font-display font-semibold text-label uppercase mb-5 tracking-[0.25em]">Upbeatz AI Growth Engine</p>
+            <h2 className="text-display-md font-display font-bold text-foreground mb-6">The Future Of Search Is Changing</h2>
+            <p className="text-muted-foreground text-body-lg max-w-2xl mx-auto leading-relaxed mb-4">
+              Customers are no longer only searching Google. They are asking AI assistants for recommendations,
+              comparisons and solutions. Businesses that are understood by AI will have a competitive advantage.
+            </p>
+            <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              Upbeatz helps businesses optimise their digital presence for search engines and AI-powered discovery.
+            </p>
+          </AnimatedSection>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-12">
+            {aiSearchCards.map((c, i) => (
+              <AnimatedSection key={c.title} delay={i * 0.1}>
+                <article className="glass-card-hover p-8 h-full">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-6">
+                    <c.icon className="text-primary" size={22} />
+                  </div>
+                  <h3 className="font-display font-bold text-xl text-foreground mb-3">{c.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{c.desc}</p>
+                </article>
+              </AnimatedSection>
+            ))}
+          </div>
+          <AnimatedSection className="text-center">
+            <Link to="/ai-growth-engine" className="btn-primary inline-flex items-center gap-2">
+              Explore AI Growth Engine
+              <ArrowRight size={16} />
+            </Link>
           </AnimatedSection>
         </div>
       </section>
