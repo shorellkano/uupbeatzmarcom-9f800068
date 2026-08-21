@@ -8,8 +8,24 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import {
   Megaphone, PenTool, Target, Search, Sparkles, Globe, ShoppingCart, LayoutDashboard,
-  Building2, TrendingUp, Award, ArrowRight, ArrowUpRight, CheckCircle2, BarChart3, Bot
+  Building2, TrendingUp, Award, ArrowRight, ArrowUpRight, CheckCircle2, BarChart3, Bot, ShieldCheck
 } from "lucide-react";
+import { posts } from "@/data/blog";
+
+const aiSearchCards = [
+  { icon: Search, title: "Google Search Visibility", desc: "Helping businesses improve how they appear when customers actively search for their products and services." },
+  { icon: Sparkles, title: "AI Search Visibility", desc: "Helping businesses become better understood by AI assistants and future search platforms." },
+  { icon: ShieldCheck, title: "Digital Authority", desc: "Building the trust signals, content and online presence that influence customer decisions." },
+];
+
+const insightSlugs = [
+  "how-ai-search-will-change-how-customers-find-businesses",
+  "google-seo-vs-ai-search-what-business-owners-need-to-know",
+  "why-your-website-may-not-be-ready-for-ai",
+];
+const insights = insightSlugs
+  .map((s) => posts.find((p) => p.slug === s))
+  .filter((p): p is (typeof posts)[number] => Boolean(p));
 
 const WA = (msg: string) => `https://wa.me/2349097927111?text=${encodeURIComponent(msg)}`;
 const GROW = WA("Hi Upbeatz Marcom, I'd like to grow my business online.");
