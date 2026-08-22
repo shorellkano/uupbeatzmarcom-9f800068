@@ -7,6 +7,7 @@ import Index from "./pages/Index.tsx";
 import CampaignPackages from "./pages/CampaignPackages.tsx";
 import CampaignProcess from "./pages/CampaignProcess.tsx";
 import Websites from "./pages/Websites.tsx";
+import AIGrowthEngine from "./pages/AIGrowthEngine.tsx";
 import Work from "./pages/Work.tsx";
 import Storvo from "./pages/Storvo.tsx";
 import Contact from "./pages/Contact.tsx";
