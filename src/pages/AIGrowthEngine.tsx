@@ -154,7 +154,7 @@ const AIGrowthEngine = () => {
             <p className="text-primary font-display font-semibold text-label uppercase mb-6 tracking-[0.25em]">
               Upbeatz AI Growth Engine
             </p>
-            <h1 className="text-[clamp(2.1rem,7vw,4.75rem)] font-display font-extrabold leading-[1.04] tracking-[-0.03em] mb-7">
+            <h1 className="text-[clamp(1.75rem,6.2vw,4.75rem)] font-display font-extrabold leading-[1.06] tracking-[-0.03em] mb-7 break-words">
               <span className="gradient-text">BECOME THE BUSINESS </span>
               <span className="gradient-text-primary">AI RECOMMENDS.</span>
             </h1>
