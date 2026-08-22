@@ -490,6 +490,52 @@ const Index = () => {
 
       <div className="section-divider" />
 
+      {/* AI Growth Insights */}
+      <section className="section-padding bg-mesh relative">
+        <div className="container mx-auto max-w-6xl relative z-10">
+          <AnimatedSection className="text-center mb-16">
+            <p className="text-primary font-display font-semibold text-label uppercase mb-5 tracking-[0.25em]">Insights</p>
+            <h2 className="text-display-md font-display font-bold text-foreground mb-5">AI Growth Insights</h2>
+            <p className="text-muted-foreground text-body-lg max-w-2xl mx-auto">
+              Perspectives on how AI is reshaping search, discovery and customer decisions.
+            </p>
+          </AnimatedSection>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-12">
+            {insights.map((p, i) => (
+              <AnimatedSection key={p.slug} delay={i * 0.08}>
+                <Link to={`/blog/${p.slug}`} className="glass-card-hover h-full group block overflow-hidden">
+                  <div className="aspect-[16/10] overflow-hidden">
+                    <img
+                      src={p.image}
+                      alt={p.imageAlt}
+                      loading="lazy"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="p-7">
+                    <p className="text-primary text-[11px] uppercase tracking-wider font-display font-semibold mb-3">{p.category}</p>
+                    <h3 className="font-display font-bold text-lg text-foreground mb-3 leading-snug">{p.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-4">{p.summary}</p>
+                    <span className="inline-flex items-center gap-2 text-primary text-sm font-display font-semibold">
+                      Read insight
+                      <ArrowUpRight size={15} className="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                    </span>
+                  </div>
+                </Link>
+              </AnimatedSection>
+            ))}
+          </div>
+          <AnimatedSection className="text-center">
+            <Link to="/blog" className="btn-outline inline-flex items-center gap-2">
+              View All Insights
+              <ArrowRight size={16} />
+            </Link>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      <div className="section-divider" />
+
       {/* Final CTA */}
       <section id="contact" className="section-padding relative scroll-mt-24">
         <div className="absolute inset-0 bg-radial-dark" />

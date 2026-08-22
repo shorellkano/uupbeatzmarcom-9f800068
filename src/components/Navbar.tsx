@@ -8,6 +8,7 @@ import { trackWhatsApp } from "@/lib/analytics";
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/#services" },
+  { label: "AI Growth Engine", href: "/ai-growth-engine" },
   { label: "Work", href: "/work" },
   { label: "Websites", href: "/websites" },
   { label: "Insights", href: "/blog" },
