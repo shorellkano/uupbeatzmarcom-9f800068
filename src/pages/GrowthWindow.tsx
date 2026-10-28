@@ -407,7 +407,7 @@ const GrowthWindow = () => {
       </header>
 
       <main className="relative z-10 pt-16 md:pt-20">
-        <section className="relative px-5 pb-20 pt-16 md:px-8 md:pb-28 md:pt-24">
+        <section className="relative px-5 pb-16 pt-12 md:px-8 md:pb-20 md:pt-16">
           <div className="container mx-auto max-w-6xl text-center">
             <motion.div
               initial={{ opacity: 0, y: 24 }}
@@ -422,7 +422,7 @@ const GrowthWindow = () => {
                 5 website slots - 5 social growth slots - serious businesses only
               </p>
 
-              <h1 className="mx-auto max-w-5xl font-display text-[clamp(2.4rem,8vw,6.6rem)] font-extrabold leading-[0.96] tracking-[-0.045em]">
+              <h1 className="mx-auto max-w-4xl font-display text-[clamp(2.35rem,6vw,5.2rem)] font-extrabold leading-[0.94] tracking-[-0.04em]">
                 <span className="gradient-text block">
                   THE UPBEATZ
                 </span>
@@ -492,10 +492,10 @@ const GrowthWindow = () => {
 
         <div className="section-divider" />
 
-        <section
-          className="section-padding !py-20 md:!py-28 bg-mesh"
-          id="offers"
-        >
+      <section
+  className="section-padding !py-20 md:!py-28 scroll-mt-20 md:scroll-mt-24"
+  id="proof"
+>
           <div className="container mx-auto max-w-7xl">
             <div className="mx-auto mb-12 max-w-3xl text-center md:mb-16">
               <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.24em] text-primary">
