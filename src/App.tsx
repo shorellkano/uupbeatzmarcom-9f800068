@@ -17,6 +17,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
 import TermsAndConditions from "./pages/TermsAndConditions.tsx";
 import CookiePolicy from "./pages/CookiePolicy.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import GrowthWindow from "./pages/GrowthWindow.tsx";
 import ScrollManager from "./components/ScrollManager.tsx";
 
 const queryClient = new QueryClient();
@@ -42,6 +43,7 @@ const App = () => (
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
           <Route path="/cookie-policy" element={<CookiePolicy />} />
+          <Route path="/growth-window" element={<GrowthWindow />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
@@ -50,3 +52,5 @@ const App = () => (
 );
 
 export default App;
+
+
