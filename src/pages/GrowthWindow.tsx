@@ -14,7 +14,8 @@ import {
   BadgeCheck,
   Zap,
 } from "lucide-react";
-
+import savviLogo from "@/assets/savvi-logo.png";
+import opshelmLogo from "@/assets/opshelm-logo.png";
 import logo from "@/assets/upbeatz-logo.png";
 import zebralinkLogo from "@/assets/zebralink-logo.png";
 import storvoLogo from "@/assets/storvo-logo.png";
