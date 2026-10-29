@@ -49,7 +49,7 @@ const whatsappUrl = (message: string) =>
   `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
 
 const WEBSITE_PAYMENT_URL = "https://paystack.shop/pay/-c-uo6w0fg";
-const SOCIAL_PAYMENT_URL = "https://paystack.shop/pay/icupyn9cng";
+const SOCIAL_PAYMENT_URL = "https://paystack.shop/pay/icupyr9cng";
 const BUNDLE_PAYMENT_URL = "https://paystack.shop/pay/2pcln6zp8p";
 
 const offers = [
