@@ -48,9 +48,13 @@ const GENERAL_MESSAGE = encodeURIComponent(
 const whatsappUrl = (message: string) =>
   `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
 
+const WEBSITE_PAYMENT_URL = "https://paystack.shop/pay/-c-uo6w0fg";
+const SOCIAL_PAYMENT_URL = "https://paystack.shop/pay/icupyn9cng";
+const BUNDLE_PAYMENT_URL = "https://paystack.shop/pay/2pcln6zp8p";
+
 const offers = [
   {
-    name: "Website Launch Slot",
+    name: "Website Launch Slot", paymentUrl: WEBSITE_PAYMENT_URL,
     eyebrow: "Digital presence",
     price: `${NAIRA}150,000`,
     was: `Usually from ${NAIRA}350,000`,
@@ -65,11 +69,11 @@ const offers = [
       "Free .com.ng domain for the first year where applicable",
       "Professional email setup assistance",
     ],
-    cta: "Claim Website Slot",
+cta: "Ask on WhatsApp",
     href: whatsappUrl(WEBSITE_MESSAGE),
   },
   {
-    name: "Social Growth Launch",
+    name: "Social Growth Launch", paymentUrl: SOCIAL_PAYMENT_URL,
     eyebrow: "November intake",
     price: `${NAIRA}150,000`,
     was: `Regular package ${NAIRA}450,000`,
@@ -84,11 +88,11 @@ const offers = [
       "Graphics, carousels, Reels & edited videos",
       "Platform-specific content adaptation",
     ],
-    cta: "Claim Social Growth Slot",
+cta: "Ask on WhatsApp",
     href: whatsappUrl(SOCIAL_MESSAGE),
   },
   {
-    name: "Digital Growth Launch Bundle",
+    name: "Digital Growth Launch Bundle", paymentUrl: BUNDLE_PAYMENT_URL,
     eyebrow: "Best value",
     price: `${NAIRA}290,000`,
     was: `Save ${NAIRA}10,000 when you take both`,
@@ -102,11 +106,13 @@ const offers = [
       "Business email setup assistance",
       "Priority onboarding",
     ],
-    cta: "Claim Bundle",
+    cta: "Ask on WhatsApp",
     href: whatsappUrl(BUNDLE_MESSAGE),
     featured: true,
   },
 ];
+
+
 
 const portfolio = [
   {
@@ -592,20 +598,27 @@ const GrowthWindow = () => {
                     ))}
                   </ul>
 
-                  <a
-                    href={offer.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className={`${
-                      offer.featured
-                        ? "btn-primary"
-                        : "btn-outline"
-                    } mt-8 flex items-center justify-center gap-2`}
-                  >
-                    <MessageCircle size={16} />
+                  
+   <div className="mt-8 grid gap-3">
+  <a
+    href={offer.href}
+    target="_blank"
+    rel="noreferrer"
+    className={`${offer.featured ? "btn-primary" : "btn-outline"} flex items-center justify-center gap-2`}
+  >
+    <MessageCircle size={16} />
+    {offer.cta}
+  </a>
 
-                    {offer.cta}
-                  </a>
+  <a
+    href={offer.paymentUrl}
+    target="_blank"
+    rel="noreferrer"
+    className={`${offer.featured ? "btn-outline" : "btn-primary"} flex items-center justify-center gap-2`}
+  >
+    Pay Now
+  </a>
+</div>
                 </motion.div>
               ))}
             </div>
