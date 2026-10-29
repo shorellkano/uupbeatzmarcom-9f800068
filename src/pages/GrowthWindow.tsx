@@ -425,23 +425,25 @@ const GrowthWindow = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
             >
-              <div className="mb-7 flex justify-center">
-                <Countdown />
-              </div>
+             <div className="mb-7 flex justify-center">
+  <div className="inline-flex items-center gap-3 rounded-2xl border border-primary/20 bg-primary/[0.06] px-4 py-3">
+    <Clock3 size={17} className="text-primary" />
 
-              <p className="mb-5 font-display text-xs font-bold uppercase tracking-[0.28em] text-primary md:text-sm">
-                5 website slots - 5 social growth slots - serious businesses only
-              </p>
+    <div className="text-left">
+      <p className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+        Growth Window
+      </p>
 
-              <h1 className="mx-auto max-w-4xl font-display text-[clamp(2.35rem,6vw,5.2rem)] font-extrabold leading-[0.94] tracking-[-0.04em]">
-                <span className="gradient-text block">
-                  THE UPBEATZ
-                </span>
+      <p className="font-display text-lg font-extrabold tracking-tight text-foreground">
+        Opens shortly
+      </p>
+    </div>
+  </div>
+</div>
 
-                <span className="gradient-text-primary block">
-                  GROWTH WINDOW
-                </span>
-              </h1>
+<p className="mb-5 font-display text-xs font-bold uppercase tracking-[0.28em] text-primary md:text-sm">
+  LIMITED-TIME OFFER - LIMITED SLOTS - SERIOUS BUSINESSES ONLY
+</p>
 
               <p className="mx-auto mt-8 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-xl">
                 Your business may already be doing great work. This is your
