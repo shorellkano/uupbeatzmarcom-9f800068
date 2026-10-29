@@ -170,7 +170,24 @@ const portfolio = [
     logo: opshelmLogo,
   },
 ];
-
+const faqs = [
+  {
+    q: "Why is the price lower than your normal rate?",
+    a: "This is a limited-capacity Growth Window created for businesses ready to commit now. The scope remains clearly defined, and once the available intake is filled the promotional rate closes.",
+  },
+  {
+    q: "When does work start?",
+    a: "Your slot is confirmed after payment and onboarding. Work begins once we receive the required brand assets, business information and project content.",
+  },
+  {
+    q: "Can I pay later and still keep the offer?",
+    a: "No. Promotional slots are only reserved when payment is received during the Growth Window. An enquiry alone does not reserve a slot.",
+  },
+  {
+    q: "What if I need more than the listed website scope?",
+    a: "Message us on WhatsApp. We can confirm whether the Growth Window package fits your project or recommend a custom solution before you pay.",
+  },
+];
 const proofPoints = [
   {
     icon: BadgeCheck,
