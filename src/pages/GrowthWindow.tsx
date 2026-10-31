@@ -235,11 +235,10 @@ const processSteps = [
     description: "Send your assets and business information so work can begin.",
   },
 ];
-
 const getFallbackEnd = () => {
-  return new Date("2026-10-29T12:00:00+01:00").getTime();
+  // 48-hour Growth Window: closes Sunday, 1 November 2026 at 9:57 PM Lagos time.
+  return new Date("2026-11-01T21:57:00+01:00").getTime();
 };
-
 const getCampaignEnd = () => {
   const envEnd = import.meta.env.VITE_GROWTH_WINDOW_END as
     | string
@@ -431,24 +430,11 @@ const GrowthWindow = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
             >
-             <div className="mb-7 flex justify-center">
-  <div className="inline-flex items-center gap-3 rounded-2xl border border-primary/20 bg-primary/[0.06] px-4 py-3">
-    <Clock3 size={17} className="text-primary" />
-
-    <div className="text-left">
-      <p className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-        Growth Window
-      </p>
-
-      <p className="font-display text-lg font-extrabold tracking-tight text-foreground">
-        Opens shortly
-      </p>
-    </div>
-  </div>
+            <div className="mb-7 flex justify-center">
+  <Countdown />
 </div>
-
 <p className="mb-5 font-display text-xs font-bold uppercase tracking-[0.28em] text-primary md:text-sm">
-  LIMITED-TIME OFFER - LIMITED SLOTS - SERIOUS BUSINESSES ONLY
+48 HOURS · LIMITED SLOTS · SERIOUS BUSINESSES ONLY
 </p>
 
               <p className="mx-auto mt-8 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-xl">
@@ -481,18 +467,22 @@ const GrowthWindow = () => {
               </div>
 
               <div className="mt-10 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
-                <a
-                  href="#offers"
-                  className="btn-primary flex items-center justify-center gap-2 group"
-                >
-                  See the Offers
-
-                  <ArrowRight
-                    size={16}
-                    className="transition-transform group-hover:translate-x-1"
-                  />
-                </a>
-
+                
+                 <button
+  type="button"
+  onClick={() => {
+    document
+      .getElementById("offers")
+      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }}
+  className="btn-primary flex items-center justify-center gap-2 group"
+>
+  See the Offers
+  <ArrowRight
+    size={16}
+    className="transition-transform group-hover:translate-x-1"
+  />
+</button>
                 <a
                   href="#proof"
                   className="btn-outline flex items-center justify-center gap-2"
