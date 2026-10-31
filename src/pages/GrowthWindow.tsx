@@ -503,7 +503,7 @@ const GrowthWindow = () => {
 
       <section
   className="section-padding !py-20 md:!py-28 scroll-mt-20 md:scroll-mt-24"
-  id="proof"
+  id="offers"
 >
           <div className="container mx-auto max-w-7xl">
             <div className="mx-auto mb-12 max-w-3xl text-center md:mb-16">
