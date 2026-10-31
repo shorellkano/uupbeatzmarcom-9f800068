@@ -25,7 +25,11 @@ import roweparkLogo from "@/assets/rowepark-logo.jpg";
 import relishLogo from "@/assets/relish-logo.jpg";
 import felicitousLogo from "@/assets/felicitous-logo.png";
 import puretemLogo from "@/assets/puretem-logo.jpg";
-
+import {
+  trackCta,
+  trackPageView,
+  trackWhatsApp,
+} from "@/lib/analytics";
 const WHATSAPP_NUMBER = "2349097927111";
 const NAIRA = "\u20A6";
 
@@ -313,7 +317,10 @@ const GrowthWindow = () => {
 
     document.title =
       "Growth Window | Website & Social Growth Offers | Upbeatz Marcom";
-
+trackPageView(
+  "/growth-window",
+  "Growth Window | Website & Social Growth Offers | Upbeatz Marcom"
+);
     const ensureMeta = (
       name: string,
       content: string,
@@ -404,9 +411,12 @@ const GrowthWindow = () => {
           </a>
 
           <a
-            href={whatsappUrl(GENERAL_MESSAGE)}
-            target="_blank"
-            rel="noreferrer"
+  href={whatsappUrl(GENERAL_MESSAGE)}
+  target="_blank"
+  rel="noreferrer"
+  onClick={() =>
+    trackWhatsApp("growth_window_header", "Talk to Upbeatz")
+  }
             className="btn-primary !px-4 !py-2.5 md:!px-6 md:!py-3 flex items-center gap-2 !text-xs"
           >
             <MessageCircle size={15} />
@@ -469,12 +479,13 @@ const GrowthWindow = () => {
               <div className="mt-10 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
                 
                  <button
-  type="button"
   onClick={() => {
-    document
-      .getElementById("offers")
-      ?.scrollIntoView({ behavior: "smooth", block: "start" });
-  }}
+  trackCta("See the Offers", "growth_window_hero");
+
+  document
+    .getElementById("offers")
+    ?.scrollIntoView({ behavior: "smooth", block: "start" });
+}}
   className="btn-primary flex items-center justify-center gap-2 group"
 >
   See the Offers
@@ -483,10 +494,13 @@ const GrowthWindow = () => {
     className="transition-transform group-hover:translate-x-1"
   />
 </button>
-                <a
-                  href="#proof"
-                  className="btn-outline flex items-center justify-center gap-2"
-                >
+               <a
+  href="#proof"
+  onClick={() =>
+    trackCta("See Our Work", "growth_window_hero")
+  }
+  className="btn-outline flex items-center justify-center gap-2"
+>
                   See Our Work
                 </a>
               </div>
@@ -590,22 +604,34 @@ const GrowthWindow = () => {
 
                   
    <div className="mt-8 grid gap-3">
-  <a
-    href={offer.href}
-    target="_blank"
-    rel="noreferrer"
-    className={`${offer.featured ? "btn-primary" : "btn-outline"} flex items-center justify-center gap-2`}
-  >
+ <a
+  href={offer.href}
+  target="_blank"
+  rel="noreferrer"
+  onClick={() =>
+    trackWhatsApp(
+      "growth_window_offer_card",
+      `${offer.name} - WhatsApp`
+    )
+  }
+  className={`${offer.featured ? "btn-primary" : "btn-outline"} flex items-center justify-center gap-2`}
+>
     <MessageCircle size={16} />
     {offer.cta}
   </a>
 
   <a
-    href={offer.paymentUrl}
-    target="_blank"
-    rel="noreferrer"
-    className={`${offer.featured ? "btn-outline" : "btn-primary"} flex items-center justify-center gap-2`}
-  >
+  href={offer.paymentUrl}
+  target="_blank"
+  rel="noreferrer"
+  onClick={() =>
+    trackCta(
+      `${offer.name} - Pay Now`,
+      "growth_window_offer_card"
+    )
+  }
+  className={`${offer.featured ? "btn-outline" : "btn-primary"} flex items-center justify-center gap-2`}
+>
     Pay Now
   </a>
 </div>
@@ -834,11 +860,17 @@ const GrowthWindow = () => {
 
             <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
               <a
-                href={whatsappUrl(GENERAL_MESSAGE)}
-                target="_blank"
-                rel="noreferrer"
-                className="btn-primary flex items-center justify-center gap-2"
-              >
+  href={whatsappUrl(GENERAL_MESSAGE)}
+  target="_blank"
+  rel="noreferrer"
+  onClick={() =>
+    trackWhatsApp(
+      "growth_window_bottom_cta",
+      "Claim a Growth Slot"
+    )
+  }
+  className="btn-primary flex items-center justify-center gap-2"
+>
                 <MessageCircle size={17} />
 
                 Claim a Growth Slot
